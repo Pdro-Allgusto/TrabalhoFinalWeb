@@ -1,0 +1,5 @@
+1_instalar o django
+	pip install django
+
+2_instalar o django-stdimage
+	pip install django-stdimage

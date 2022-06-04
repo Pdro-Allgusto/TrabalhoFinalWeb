@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block conteudo %}
+
+<h2>Materias</h2>
+<a href="/professores">Todas as materias</a>
+{% for materia in lista_materias %}
+<a href="{{ materia.get_absolute_url }}">{{ materia.nome }}</a>
+{% endfor %}
+
+<h2>Professores</h2>
+<div class="produtos__container">
+    {% for professor in lista_professores %}
+    <div class="card produto__card">
+        <img class="card-img-top" src="{{ professor.imagem.url }}" alt="Card image cap">
+        <div class="card-body">
+            <p class="card-title">{{ professor.nome }}</p>
+            <p> RA:{{ professor.ra }}</p>
+            <a href="{{ professor.get_absolute_url }}" class="btn btn-primary">Ver mais detalhes...</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock conteudo %}

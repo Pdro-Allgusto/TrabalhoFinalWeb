@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- tags obrigatórias -->
+    <meta charset="UTF-8">
+    <title>Projeto Django</title>
+
+    {% include 'cssImport.html' %}
+    {% include 'barra_navegacao.html' %}
+
+    <!-- CSS Específico deste projeto -->
+    <link rel="stylesheet" href="{% static 'css/styleCursos.css' %}">
+
+
+
+</head>
+<body>
+
+{% block conteudoCurso %}
+{% endblock conteudoCurso %}
+
+
+{% include 'scriptImport.html' %}
+<!-- Script Específico deste projeto -->
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

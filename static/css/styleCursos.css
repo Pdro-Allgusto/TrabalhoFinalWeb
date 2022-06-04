@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+/* ========= VARIABLES ========= */
+
+
+
+
+/* ========= RESET ========= */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* ======= Centralização ======== */
+
+main{
+    padding-top: 30px;
+}
+h1{
+    text-align: center
+}
+
+p{
+    text-align: justify;
+}
+
+/* ======= Responsividade ======= */
+
+#fotoDireita{
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+}
+
+#itemDireita {
+    padding: 0 20px;
+    margin: auto;
+}
+
+#itemDireita > img{
+    width: auto;
+    height: 20em;
+    border-radius: 10px;
+}
+
+#imgCentral{
+    width: 100%;
+    height: auto;
+}
+
+/* ======= Media Queries ======= */
+
+@media (max-width: 990px) {
+    main{
+        margin: 0vw 4vw;
+    }
+
+        #imgCentral{
+        width: 10vh;
+        height: 100vw;
+    }
+
+    #fotoDireita{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+    #navbarSupportedContent{
+        margin-left: 50px;
+    }
+    .dropdown-menu{
+        margin-right: 50px;
+    }
+}
+
+@media(min-width: 991px){
+
+    main{
+        margin: 0vw 15vw;
+    }
+}
+
+/* ======= BANNER ======== */
+.bannerCC{
+        background-image: url("https://c.wallhere.com/photos/15/62/digital_art_circuits-102576.jpg!d");
+}
+.bannerEC{
+    background-image: url("https://www.unifsa.com.br/wp-content/uploads/2012/06/engenharia-civil-930x445.jpg")
+}
+.bannerAE{
+    background-image: url("https://i.imgur.com/uSZT2uB.jpg")
+}
+.banner {
+    height: 40vh;
+    /* aqui alinha nos eixos horizontal e vertical */
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /*https://www.w3schools.com/css/tryit.asp?filename=trycss_position_relative*/
+    position: relative;
+}
+.color-overlay {
+    width: 100%;
+    height: 100%;
+    background: lightblue;
+    opacity: 0.1;
+    /*https://www.w3schools.com/css/tryit.asp?filename=trycss_position_absolute*/
+    position: absolute;
+}
+
+.banner-elementos {
+    margin-top: 17vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    z-index: 1;
+}
+
+.banner h1 {
+    color: white;
+    font-size: 4.5rem;
+    font-weight: bold;
+}
+

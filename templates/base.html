@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- tags obrigatórias -->
+    <meta charset="UTF-8">
+    <title>Trabalho Final</title>
+
+    {% include 'cssImport.html' %}
+
+    <!-- CSS Específico deste projeto -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/django.css' %}">
+    {% include 'barra_navegacao.html' %}
+
+</head>
+<body>
+<div class="container-fluid">
+    {% block conteudo %}
+    {% endblock conteudo %}
+</div>
+
+
+
+{% include 'scriptImport.html' %}
+<!-- Script Específico deste projeto -->
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

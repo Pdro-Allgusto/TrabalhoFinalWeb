@@ -1,0 +1,17 @@
+.produtos__container {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.produto__img {
+    width: 150px;
+}
+
+.produto__card {
+    margin: 5px;
+    width: 15rem;
+    padding: 10px;
+}

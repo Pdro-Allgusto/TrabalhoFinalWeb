@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h1>Perfil do Professor</h1>
+<img src="{{ professor.imagem.url }}" alt="{{ professor.nome }}">
+<h3><a href="{{ professor.get_absolute_url }}">{{ professor.nome }}</a>RA:{{ professor.ra }}</h3>
+<p>{{ professor.descricao|safe|linebreaksbr }}</p>
+{% endblock conteudo %}
